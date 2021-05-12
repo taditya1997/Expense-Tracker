@@ -1,11 +1,13 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {GlobalContext} from './Context/GlobalState';
 import TransactionItem from './TransactionItem.js';
 
 const History = (props) => 
 {
-const {transaction}=useContext(GlobalContext);
-
+const {transaction,getTransaction}=useContext(GlobalContext);
+useEffect(()=>{
+    getTransaction();
+},[transaction])
 
 
     return (

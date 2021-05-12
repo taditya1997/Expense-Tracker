@@ -10,7 +10,7 @@ const TransactionItem = ({transaction}) => {
     return (
         
         <li className="history-list">
-        <button className="cancel" onClick={()=>deleteTransactions(transaction.id)}>x</button>
+        <button className="cancel" onClick={()=>deleteTransactions(transaction._id)}>x</button>
         <Card className={transaction.amount>0?'transaction-credit':'transaction-debit'}>
             <Typography className='list-item' color="textSecondary" >
                 {transaction.text}
